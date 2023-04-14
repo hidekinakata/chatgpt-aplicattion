@@ -95,7 +95,6 @@ const ChatContainer: React.FC<ChatContainerType> = (props) => {
         top: contentRef.current!.scrollHeight,
         behavior: "smooth",
       });
-      console.log(chunkValue);
     }
     setTyping(false);
   };
