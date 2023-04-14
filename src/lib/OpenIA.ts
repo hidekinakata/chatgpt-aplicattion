@@ -53,6 +53,7 @@ export default async function OAIStream(payload: Payload) {
           }
           try {
             const json = JSON.parse(data);
+            console.log(json);
             const text = json.choices[0].delta.content;
 
             if (text === undefined || text === null) return;
