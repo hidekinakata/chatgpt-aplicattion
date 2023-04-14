@@ -3,13 +3,9 @@
 import React, { useEffect, useState } from "react";
 import Sidebar from "@/components/Sidebar";
 import { useMediaQuery, useScreen } from "usehooks-ts";
-import useMinWidth from "@/hooks/useMinWidth";
 
 type HomeLayoutType = { children: React.ReactNode };
 const HomeLayout: React.FC<HomeLayoutType> = ({ children }) => {
-  const isMedium = useMinWidth(768);
-  const [sidebarHidden, setSidebarHidden] = useState(false);
-
   return (
     <div
       className={`transition overflow-hidden w-full h-screen relative grid py-3 px-3 md:px-48 gap-3 bg-gray-700  grid-rows-[auto_90%]`}

@@ -100,10 +100,6 @@ const ChatContainer: React.FC<ChatContainerType> = (props) => {
     setTyping(false);
   };
 
-  useEffect(() => {
-    if (!typing) console.log(convertResponse(gptResponse));
-  }, [typing]);
-
   return (
     <>
       {prompt === "" ? (
@@ -245,13 +241,13 @@ const ContentPlaceholder = () => {
           </h2>
           <ul className="flex flex-col gap-3.5 max-w-md m-auto">
             <button className="w-full bg-white/5 p-3 rounded-md hover:bg-gray-900">
-              "Explain quantum computing in simple terms" →
+              &quot;Explain quantum computing in simple terms&quot; →
             </button>
             <button className="w-full bg-white/5 p-3 rounded-md hover:bg-gray-900">
-              "Got any creative ideas for a 10 year old’s birthday?" →
+              &quot;Got any creative ideas for a 10 year old’s birthday?&quot; →
             </button>
             <button className="w-full bg-white/5 p-3 rounded-md hover:bg-gray-900">
-              "How do I make an HTTP request in Javascript?" →
+              &quot;How do I make an HTTP request in Javascript?&quot; →
             </button>
           </ul>
         </div>
